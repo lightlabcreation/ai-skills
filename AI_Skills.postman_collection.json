@@ -1,0 +1,2267 @@
+{
+	"info": {
+		"_postman_id": "ecddf14e-83a8-4716-b5bf-d732df9d750c",
+		"name": "AI_Skills",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38687262",
+		"_collection_link": "https://smart-hr-team.postman.co/workspace/My-Workspace~fb37a001-f15a-4b79-884b-e2ded81648ae/collection/38687262-ecddf14e-83a8-4716-b5bf-d732df9d750c?action=share&source=collection_link&creator=38687262"
+	},
+	"item": [
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "createStudent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "father_name",
+									"value": "Robert Do",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "admission_no",
+									"value": "ADM1001",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "id_no",
+									"value": "ID12345",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "mobile_number",
+									"value": "9876543210",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "university_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "date_of_birth",
+									"value": "2001-01-01",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "General",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "123 Street, City",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "full_name",
+									"value": "yadav",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "user@123",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "kunal@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "Tu_YQEuOK/const.jpeg",
+									"disabled": true
+								},
+								{
+									"key": "documents",
+									"type": "file",
+									"src": "2ovSj-gfj/general.pdf",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/createStudent",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"createStudent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit_student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"dddd@gmail.com\",\r\n    \"role\": \"student\",\r\n    \"mobile\": \"11111111111\",\r\n    \"password\": \"1233\",\r\n    \"confirmPassword\":\"1233\",\r\n    \"course_id\": \"[1,2]\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/editstudent/34",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"editstudent",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll_student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/student",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingle_student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/student?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"student"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/deletestudent/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"deletestudent",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Student_Status_update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_active\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/studentStatus/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"studentStatus",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createInquiry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"counselor_id\": \"1\",\r\n  \"inquiry_type\": \"General\",\r\n  \"source\": \"Website\",\r\n  \"branch\": \"Branch 1\",\r\n  \"full_name\": \"John Doe\",\r\n  \"phone_number\": \"1234567890\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"course_name\": \"Web Development\",\r\n  \"country\": \"India\",\r\n  \"city\": \"Mumbai\",\r\n  \"date_of_inquiry\": \"2025-06-07\",\r\n  \"address\": \"123 Main St, Mumbai\",\r\n  \"present_address\": \"123 Main St, Mumbai\",\r\n  \"education_background\": [\"Bachelors in Computer Science\"],\r\n  \"english_proficiency\": [\"Intermediate\"],\r\n  \"company_name\": \"ABC Corp\",\r\n  \"job_title\": \"Developer\",\r\n  \"job_duration\": \"2 years\",\r\n  \"preferred_countries\": [\"USA\", \"Canada\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/inquiries",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"inquiries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createStudentFeeBYcounselor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"student_name\": \"John Doe\",\r\n  \"description\": \"Tuition fee for the semester\",\r\n  \"amount\": 5000,\r\n  \"fee_date\": \"2025-06-07\",\r\n  \"inquiry_id\": 34,\r\n  \"user_id\": 11\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/createStudentFeeBYcounselors",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"createStudentFeeBYcounselors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStudentFeesByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/getStudentFeesByUser/11",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"getStudentFeesByUser",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/lead/25",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"lead",
+								"25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/lead/getLeadByCounselorIdnew/16",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"lead",
+								"getLeadByCounselorIdnew",
+								"16"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/inquiries/32",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"inquiries",
+								"32"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Instructor",
+			"item": [
+				{
+					"name": "Add_Instructor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "full_name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "testq@gmail.comaaa",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "21654897",
+									"type": "text"
+								},
+								{
+									"key": "expertise",
+									"value": "321564987",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/qr_banner (22).png"
+								},
+								{
+									"key": "bank_account_number",
+									"value": "213654987",
+									"type": "text"
+								},
+								{
+									"key": "ifsc_code",
+									"value": "12564987",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/instructor",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"instructor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit_instructor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "full_name",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "testq11111111@gmail.comaaa",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "mobile_number",
+									"value": "21654897",
+									"type": "text"
+								},
+								{
+									"key": "expertise",
+									"value": "321564987",
+									"type": "text"
+								},
+								{
+									"key": "bank_account_number",
+									"value": "213654987",
+									"type": "text"
+								},
+								{
+									"key": "ifsc_code",
+									"value": "12564987",
+									"type": "text"
+								},
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/qr_banner (23).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/editinstructor/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"editinstructor",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll_Instructor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/instructor",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"instructor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Instructor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/deleteinstructor/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"deleteinstructor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "instructor_Status_update Copy",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_active\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/instructorStatus/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"instructorStatus",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingle_instructor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/instructor?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"instructor"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Logins",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"student@gmail.com\",\r\n    \"password\":\"student@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchData",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/me",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot_password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"yadav@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/forgot-password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset_Password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"yadav@gmail.com\",\r\n    \"token\": \"3787d9c2cb5364f672098242fb455576a51b4483c98bbaad90d3ce5230ec4368\",\r\n    \"newPassword\": \"student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reset-password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "getAll_course",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"course_title\": \"Introduction to Node.js\",\r\n  \"course_description\": \"Learn the basics of Node.js and backend development.\",\r\n  \"course_image\": \"https://example.com/image.jpg\",\r\n  \"course_syllabus\": \"Module 1: Introduction, Module 2: Setup, Module 3: Basics.\",\r\n  \"course_content_video_link\": \"https://example.com/video.mp4\",\r\n  \"test_video\": \"https://example.com/testvideo.mp4\",\r\n  \"faqs\": \"What is Node.js?\",\r\n  \"status\":\"0\",\r\n  \"instructor_id\": 1,\r\n  \"category\": \"Programming\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/course?instructor_id=9",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"course"
+							],
+							"query": [
+								{
+									"key": "instructor_id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add_course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "course_title",
+									"value": "Introduction to Node.js",
+									"type": "text"
+								},
+								{
+									"key": "course_description",
+									"value": "Learn the basics of Node.js and backend development",
+									"type": "text"
+								},
+								{
+									"key": "course_image",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/qr_banner (23).png"
+								},
+								{
+									"key": "course_syllabus",
+									"value": "[{ \"module_title\": \"one\", \"module_syllabus\": \"one\" },{ \"module_title\": \"one\", \"module_syllabus\": \"one\" }]\n",
+									"type": "text"
+								},
+								{
+									"key": "course_content_video_link",
+									"value": "https://example.com/video.mp4",
+									"type": "text"
+								},
+								{
+									"key": "test_video",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/sample-10s.mp4"
+								},
+								{
+									"key": "faqs",
+									"value": "[{ \"question\": \"one\", \"answer\": \"one\" },{ \"question\": \"one\", \"answer\": \"one\" }]\n",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "instructor_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "course_price",
+									"value": "799",
+									"type": "text"
+								},
+								{
+									"key": "course_type",
+									"value": "recorded",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/course",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"course"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit_course",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "course_title",
+									"value": "Introduction to JAVA",
+									"type": "text"
+								},
+								{
+									"key": "course_description",
+									"value": "Learn the basics of Node.js and backend development",
+									"type": "text"
+								},
+								{
+									"key": "course_image",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/Exceptional design, great mileage, and a smooth driving experience. Customer service was helpful, though delivery took a little longer than expected. Overall, a solid choice for everyday comfort a/4.jpg"
+								},
+								{
+									"key": "course_syllabus",
+									"value": "[{ \"module_title\": \"one\", \"module_syllabus\": \"one\" },{ \"module_title\": \"one\", \"module_syllabus\": \"one\" }]\n",
+									"type": "text"
+								},
+								{
+									"key": "course_content_video_link",
+									"value": "https://example.com/video.mp4",
+									"type": "text"
+								},
+								{
+									"key": "test_video",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/Exceptional design, great mileage, and a smooth driving experience. Customer service was helpful, though delivery took a little longer than expected. Overall, a solid choice for everyday comfort a/3.jpg"
+								},
+								{
+									"key": "faqs",
+									"value": "[{ \"question\": \"one\", \"answer\": \"one\" },{ \"question\": \"one\", \"answer\": \"one\" }]\n",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "instructor_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "course_price",
+									"value": "799",
+									"type": "text"
+								},
+								{
+									"key": "course_type",
+									"value": "web dev",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/editcourse/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"editcourse",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_course",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/deletecourse/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"deletecourse",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "publishCourse",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/publishCourse/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"publishCourse",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCourses_ByCategoryId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/coursebyCategoryId/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"coursebyCategoryId",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCourses_ByInstructorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/course?instructor_id=8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"course"
+							],
+							"query": [
+								{
+									"key": "instructor_id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course_category",
+			"item": [
+				{
+					"name": "Add_category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\":\"Web Dev\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/category",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/category",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit_Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"category_name\":\"AI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/editcategory/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"editcategory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/deletecategory/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"deletecategory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_single_Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/category?id=2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"category"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Add_product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+									"    .tftable tr {background-color:#ffffff;}\r",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+									"    .tftable tr:hover {background-color:#e0ffff;}\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"tftable\" border=\"1\">\r",
+									"    <tr>\r",
+									"        <th>Success</th>\r",
+									"        <th>Message</th>\r",
+									"        <th>Error</th>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.success}}</td>\r",
+									"        <td>{{response.message}}</td>\r",
+									"        <td>{{response.error}}</td>\r",
+									"    </tr>\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    return {response: pm.response.json()}\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_title",
+									"value": "ti1",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "regular_price",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "sale_price",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "vfd",
+									"type": "text"
+								},
+								{
+									"key": "product_images",
+									"type": "file",
+									"src": "/E:/Downloads/download.jpeg"
+								},
+								{
+									"key": "author",
+									"value": "gr",
+									"type": "text"
+								},
+								{
+									"key": "product_type",
+									"value": "grg",
+									"type": "text"
+								},
+								{
+									"key": "publish_date",
+									"value": "rgrg",
+									"type": "text"
+								},
+								{
+									"key": "instructor_id",
+									"value": "8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/product",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editproduct",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_title",
+									"value": "ti1",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "regular_price",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "sale_price",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "vfd",
+									"type": "text"
+								},
+								{
+									"key": "product_images",
+									"type": "file",
+									"src": [
+										"/C:/Users/rehan/Downloads/qr_banner (23).png",
+										"/C:/Users/rehan/Downloads/WhatsApp Image 2025-04-30 at 12.56.20.jpeg"
+									]
+								},
+								{
+									"key": "publish_date",
+									"value": "gfg",
+									"type": "text"
+								},
+								{
+									"key": "product_type",
+									"value": "gf",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "fg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/editproduct/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"editproduct",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllProduct",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/product?id=5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/deleteproduct/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"deleteproduct",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Product_By_IntructorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/product",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Certificate",
+			"item": [
+				{
+					"name": "Add_certificate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "template_name",
+									"value": "test1",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "template_size",
+									"value": "A4",
+									"type": "text"
+								},
+								{
+									"key": "border_style",
+									"value": "None",
+									"type": "text"
+								},
+								{
+									"key": "certificate_content",
+									"value": "This is content ",
+									"type": "text"
+								},
+								{
+									"key": "certificate",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/qr_banner (23).png"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/certificate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_Certificate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/certificate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "template_name",
+									"value": "test1",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "template_size",
+									"value": "A4",
+									"type": "text"
+								},
+								{
+									"key": "border_style",
+									"value": "None",
+									"type": "text"
+								},
+								{
+									"key": "certificate_content",
+									"value": "This is content",
+									"type": "text"
+								},
+								{
+									"key": "certificate",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/qr_banner (23).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/editcertificate/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"editcertificate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Certificate",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/deletecertificate/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"deletecertificate",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_CertificateById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/certificate?id=3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"certificate"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish_Certificate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/publishCertificate/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"publishCertificate",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Article",
+			"item": [
+				{
+					"name": "Add_article",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "wdwd",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "wd",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "article",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/qr_banner (22).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/article",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"article"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllArticale",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/article",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"article"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingle_Article",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/article?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"article"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "wdwd",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "wd",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "article",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/qr_banner (23).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/editarticle/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"editarticle",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_Article",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/deletearticle/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"deletearticle",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish_Article",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/publisharticle/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"publisharticle",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboards",
+			"item": [
+				{
+					"name": "Admin-Dashboard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin-dashboard",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin-dashboard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "instructor-dashboard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/instructor-dashboard/31",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"instructor-dashboard",
+								"31"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "buy",
+			"item": [
+				{
+					"name": "addBuy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 29,\r\n    \"course_id\": \"[21, 26]\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/buy",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"buy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student-Test",
+			"item": [
+				{
+					"name": "Create-Test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_id\": \"62\",\r\n    \"created_by\": \"1\",\r\n    \"questions\": [\r\n        {\r\n            \"question\": \"What is JavaScript?\",\r\n            \"option1\": \"Markup Language\",\r\n            \"option2\": \"Scripting Language\",\r\n            \"option3\": \"OS\",\r\n            \"option4\": \"None\",  \r\n            \"correct_option\": \"option2\"\r\n        },\r\n        {\r\n            \"question\": \"What is JavaScript?\",\r\n            \"option1\": \"Markup Language\",\r\n            \"option2\": \"Scripting Language\",\r\n            \"option3\": \"OS\",\r\n            \"option4\": \"None\",\r\n            \"correct_option\": \"option2\"\r\n        },\r\n        {\r\n            \"question\": \"Which keyword declares a constant?\",\r\n            \"option1\": \"var\",\r\n            \"option2\": \"let\",\r\n            \"option3\": \"const\",\r\n            \"option4\": \"define\",\r\n            \"correct_option\": \"option3\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/test",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTest",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/test",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Test-Questions",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/deletetestquestion/7",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"deletetestquestion",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submittest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"course_id\": \"64\",\r\n    \"student_id\": \"52\",\r\n    \"test\": [\r\n        {\r\n            \"question_id\": 28,\r\n            \"answer\": \"option2\"\r\n        },\r\n        {\r\n            \"question_id\": 28,\r\n            \"answer\": \"option2\"\r\n        },\r\n        {\r\n            \"question_id\": 35,\r\n            \"answer\": \"option2\"\r\n        },\r\n        {\r\n            \"question_id\": 36,\r\n            \"answer\": \"option3\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/submittest",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"submittest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Test-Record",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/studentrecord/52",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"studentrecord",
+								"52"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course-Syllabus",
+			"item": [
+				{
+					"name": "Create-CourseSyllabus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "jfcj",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "hd",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/localhost_5173_chat.png",
+									"disabled": true
+								},
+								{
+									"key": "course_syllabus_id",
+									"value": "8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/courseSyllabusCont",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"courseSyllabusCont"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rating\": 4.5,\r\n  \"review_text\": \"This course was very informative and well-structured. Highly recommended!\",\r\n  \"course_id\": 12,\r\n  \"student_id\": 34\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reviews",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get-Review",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/reviews",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CourseSyllabusContent",
+			"item": [
+				{
+					"name": "CourseSyllabusContent",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/course-syllabus-content",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"course-syllabus-content"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createContent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "dvdv",
+									"type": "text"
+								},
+								{
+									"key": "subTitle_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "54",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/qr-code (26).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/course-syllabus-content",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"course-syllabus-content"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-course-syllabus-content",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "dvdv",
+									"type": "text"
+								},
+								{
+									"key": "subTitle_id",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "54",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/rehan/Downloads/qr-code (26).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/course-syllabus-content/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"course-syllabus-content",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zoom-Meet",
+			"item": [
+				{
+					"name": "Create-Zoom-Meet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"topic\": \"Maths Class\",\r\n    \"start_time\": \"2025-08-04T21:00:00\",\r\n    \"duration\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/createMeeting",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"createMeeting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch-Meets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"topic\": \"Maths Class\",\r\n    \"start_time\": \"2025-08-04T21:00:00\",\r\n    \"duration\": 30\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/fetchMeetings",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"fetchMeetings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-Meets",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"topic\": \"Maths Class\",\r\n    \"start_time\": \"2025-08-04T21:00:00\",\r\n    \"duration\": 30\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/deleteMeeting/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"deleteMeeting",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
