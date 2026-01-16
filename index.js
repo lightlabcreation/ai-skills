@@ -20,7 +20,7 @@ const PORT = 4000;
 
 // Middlewares
 app.use(express.json());
-app.use(cors({ origin: ["http://localhost:5173","https://ai-skills.netlify.app"], credentials: true }));
+app.use(cors({ origin: ["http://localhost:5173","https://ai-skills.netlify.app", "https://ai-skills.kiaantechnology.com"], credentials: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 app.use(cookieParser());
